@@ -150,7 +150,7 @@ S_ADCResults ADCResults;
 
 void APP_Tasks ( void )
 {
-
+    //dev Gaja 
     /* Check the application's current state. */
     switch ( appData.state )
     {
