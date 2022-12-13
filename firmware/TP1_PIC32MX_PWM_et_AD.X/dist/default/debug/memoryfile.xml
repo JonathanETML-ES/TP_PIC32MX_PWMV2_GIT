@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <project>                                  
-  <executable name="dist/default/production/TP1_PIC32MX_PWM_et_AD.X.production.elf">                 
+  <executable name="dist/default/debug/TP1_PIC32MX_PWM_et_AD.X.debug.elf">                 
     <memory name="program">                 
       <units>bytes</units>                 
       <length>531968</length>                 
-      <used>28888</used>                     
-      <free>503080</free>                     
+      <used>28920</used>                     
+      <free>503048</free>                     
     </memory>                              
     <memory name="data">              
       <units>bytes</units>                 
-      <length>131072</length>                 
-      <used>108</used>                     
-      <free>130964</free>                     
+      <length>131584</length>                 
+      <used>1132</used>                     
+      <free>130452</free>                     
     </memory>                              
   </executable>                            
 </project>                                 

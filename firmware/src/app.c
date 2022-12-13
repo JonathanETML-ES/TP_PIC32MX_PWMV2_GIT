@@ -167,7 +167,7 @@ void APP_Tasks ( void )
             lcd_gotoxy(1,2);                    //Allez à la ligne 2 de mon affichage
             printf_lcd("Docteur Shift");      //
             lcd_gotoxy(1,3);                    //Allez à la ligne 3 de mon affichage
-            printf_lcd("MUKS du futurrrr");      //
+            printf_lcd("MUKS du passee");      //
             lcd_bl_on();
             
             DRV_TMR0_Start(); 
