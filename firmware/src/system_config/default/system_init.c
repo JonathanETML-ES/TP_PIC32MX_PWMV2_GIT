@@ -150,10 +150,6 @@ void SYS_Initialize ( void* data )
     BSP_Initialize();        
 
     /* Initialize Drivers */
-
-    /* Initialize ADC */
-    DRV_ADC_Initialize();
-
     /* Initialize the OC Driver */
     DRV_OC0_Initialize();
     DRV_OC1_Initialize();

@@ -180,7 +180,7 @@
       <Template dnOrder="2">
         <Name dnOrder="0">system_init.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">7396FF18068A0D4BD43669255539A398</Checksum>
+        <Checksum dnOrder="2">43FDC2332387ED836D00F8D657BAE603</Checksum>
       </Template>
       <Template dnOrder="3">
         <Name dnOrder="0">drv_oc_static.h</Name>
@@ -204,7 +204,7 @@
       <Template dnOrder="7">
         <Name dnOrder="0">system_definitions.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">EB1FB167705B43EAA642E881FBC3E0CE</Checksum>
+        <Checksum dnOrder="2">76F7C51F483C2296E974F3182F656B73</Checksum>
       </Template>
       <Template dnOrder="8">
         <Name dnOrder="0">system_exceptions.c</Name>
@@ -212,70 +212,60 @@
         <Checksum dnOrder="2">A8BF1AE6018CC1DB37C1C14696195A5F</Checksum>
       </Template>
       <Template dnOrder="9">
-        <Name dnOrder="0">drv_adc_static.h</Name>
-        <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/driver/adc</Path>
-        <Checksum dnOrder="2">CF7143BC280AF7D6A3043832FB848EFF</Checksum>
-      </Template>
-      <Template dnOrder="10">
         <Name dnOrder="0">sys_devcon.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/devcon/src</Path>
         <Checksum dnOrder="2">54ADBD4A35BCA03C42C74182FCE41849</Checksum>
       </Template>
-      <Template dnOrder="11">
-        <Name dnOrder="0">drv_adc_static.c</Name>
-        <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/adc/src</Path>
-        <Checksum dnOrder="2">0655F86EF280059F94A1AC57DA580D4C</Checksum>
-      </Template>
-      <Template dnOrder="12">
+      <Template dnOrder="10">
         <Name dnOrder="0">app.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="13">
+      <Template dnOrder="11">
         <Name dnOrder="0">sys_devcon_local.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/system/devcon/src</Path>
         <Checksum dnOrder="2">B66F9B4DBD85DA7F9DE775E864E01395</Checksum>
       </Template>
-      <Template dnOrder="14">
+      <Template dnOrder="12">
         <Name dnOrder="0">sys_devcon.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default/framework/system/devcon</Path>
         <Checksum dnOrder="2">07580DCDEF89D9C79B062544109C5367</Checksum>
       </Template>
-      <Template dnOrder="15">
+      <Template dnOrder="13">
         <Name dnOrder="0">system_tasks.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
         <Checksum dnOrder="2">C2FDF6218CDD9CE0E51AFAC4ACBB5F79</Checksum>
       </Template>
-      <Template dnOrder="16">
+      <Template dnOrder="14">
         <Name dnOrder="0">sys_devcon_pic32mx.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/devcon/src</Path>
         <Checksum dnOrder="2">5141464248E33ABE9E7D144A2D4DC129</Checksum>
       </Template>
-      <Template dnOrder="17">
+      <Template dnOrder="15">
         <Name dnOrder="0">system_config.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">2AD1DA0B3663A4AA29D989B5D9C1DF1D</Checksum>
+        <Checksum dnOrder="2">F345E0BDAD2DCA2B75E5AF7BD48C17DF</Checksum>
       </Template>
-      <Template dnOrder="18">
+      <Template dnOrder="16">
         <Name dnOrder="0">app.h</Name>
         <Path dnOrder="1">Header&amp;#160;Files/app</Path>
       </Template>
-      <Template dnOrder="19">
+      <Template dnOrder="17">
         <Name dnOrder="0">drv_tmr_static.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/tmr/src</Path>
-        <Checksum dnOrder="2">04450F364F20923D150A428E12996FC4</Checksum>
+        <Checksum dnOrder="2">1E3E7E16A1A820E60A0017746D933E6B</Checksum>
       </Template>
-      <Template dnOrder="20">
+      <Template dnOrder="18">
         <Name dnOrder="0">system_interrupt.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default</Path>
-        <Checksum dnOrder="2">AFB335AF6DBCF489724E9812468AE10A</Checksum>
-        <ProjectFileChecksum dnOrder="3">57D1FF161B0D5EF3ADBAA98717AA9BAE</ProjectFileChecksum>
+        <Checksum dnOrder="2">1216398F7D468FA1630EB867904772E2</Checksum>
+        <ProjectFileChecksum dnOrder="3">0BBEF7ED96AF2CB02ECB408D87ADD209</ProjectFileChecksum>
       </Template>
-      <Template dnOrder="21">
+      <Template dnOrder="19">
         <Name dnOrder="0">drv_oc_mapping.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/driver/oc/src</Path>
         <Checksum dnOrder="2">900A6D579D145D8AD9646F52EC9E2146</Checksum>
       </Template>
-      <Template dnOrder="22">
+      <Template dnOrder="20">
         <Name dnOrder="0">sys_clk_pic32mx.c</Name>
         <Path dnOrder="1">Source&amp;#160;Files/app/system_config/default/framework/system/clk/src</Path>
         <Checksum dnOrder="2">FDF6C8068CFFAEEC5F8537A8D6514230</Checksum>
@@ -283,11 +273,11 @@
     </Templates>
     <CompilerItems dnOrder="2">
       <C32 dnOrder="0">
-        <Include dnOrder="0" value="C:\microchip\harmony\v2_06\apps\MINF\TP\TP1_PIC32MX_PWM_et_AD\firmware\src"/>
-        <Include dnOrder="1" value="C:\microchip\harmony\v2_06\apps\MINF\TP\TP1_PIC32MX_PWM_et_AD\firmware\src\system_config\default"/>
-        <Include dnOrder="2" value="C:\microchip\harmony\v2_06\apps\MINF\TP\TP1_PIC32MX_PWM_et_AD\firmware\src\default"/>
+        <Include dnOrder="0" value="C:\microchip\harmony\v2_06\apps\MINF\TP\TP_PIC32MX_PWMV2_GIT\firmware\src"/>
+        <Include dnOrder="1" value="C:\microchip\harmony\v2_06\apps\MINF\TP\TP_PIC32MX_PWMV2_GIT\firmware\src\system_config\default"/>
+        <Include dnOrder="2" value="C:\microchip\harmony\v2_06\apps\MINF\TP\TP_PIC32MX_PWMV2_GIT\firmware\src\default"/>
         <Include dnOrder="3" value="C:\microchip\harmony\v2_06\framework"/>
-        <Include dnOrder="4" value="C:\microchip\harmony\v2_06\apps\MINF\TP\TP1_PIC32MX_PWM_et_AD\firmware\src\system_config\default\framework"/>
+        <Include dnOrder="4" value="C:\microchip\harmony\v2_06\apps\MINF\TP\TP_PIC32MX_PWMV2_GIT\firmware\src\system_config\default\framework"/>
         <Include dnOrder="5" value="../../../../../../bsp/pic32mx_skes"/>
       </C32>
     </CompilerItems>

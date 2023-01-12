@@ -53,7 +53,11 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 
+#include <stdbool.h>
+#include "bsp.h"
 #include "app.h"
+#include "Mc32DriverAdc.h"
+#include "Mc32DriverLcd.h"
 
 
 // *****************************************************************************
@@ -112,11 +116,15 @@ APP_DATA appData;
   Remarks:
     See prototype in app.h.
  */
-void APP_Initialize ( void )
+void APP_Initialize ( void )    //Initialisation de nos valeurs
 {
     /* Place the App state machine in its initial state. */
     appData.state = APP_STATE_INIT;
-
+    
+    appData.mesValeurs.AngleSetting = 0; 
+    appData.mesValeurs.SpeedSetting = 0; 
+    appData.mesValeurs.absAngle = 0; 
+    appData.mesValeurs.absSpeed = 0; 
     
     /* TODO: Initialize your application's state machine and other
      * parameters.
@@ -128,7 +136,7 @@ void APP_UpdateState (APP_STATES NewState)  //Création fonction pour update la m
     appData.state = NewState;
 }
 
-void ExtinctionDesLeds(void)    //Création fonction pour éteindre toutes les LEDs
+void ExtinctionDesLeds(void)                //Création fonction pour éteindre toutes les LEDs
 {
     BSP_LEDOff(BSP_LED_0);
     BSP_LEDOff(BSP_LED_1);
@@ -150,6 +158,7 @@ S_ADCResults ADCResults;
 
 void APP_Tasks ( void )
 {
+    //S_pwmSettings PWMData; //Si jvx utiliser PWMData dans dautre fichier
 
     /* Check the application's current state. */
     switch ( appData.state )
@@ -157,46 +166,43 @@ void APP_Tasks ( void )
         /* Application's initial state. */
         case APP_STATE_INIT:
         {
-            bool appInitialized = true;
-            
-            ExtinctionDesLeds();
+            bool appInitialized = true;         //initialisation de mes valeurs par défaut
             
             lcd_init();                         //Initialisation de mon LCD
             lcd_gotoxy(1,1);                    //Allez à la ligne 1 de mon affichage
-            printf_lcd("TP1 PWM 2022-2023");   //
+            printf_lcd("TP1 PWM 2022-2023");    //
             lcd_gotoxy(1,2);                    //Allez à la ligne 2 de mon affichage
-            printf_lcd("Docteur Shift");      //
+            printf_lcd("Subramaniyam");         //
             lcd_gotoxy(1,3);                    //Allez à la ligne 3 de mon affichage
-            printf_lcd("MUKS du passee");      //
+            printf_lcd("Shifteh");              //
             lcd_bl_on();
             
-            DRV_TMR0_Start(); 
-            DRV_TMR1_Start();
-            DRV_OC0_Start();
-            DRV_TMR2_Start();
-            DRV_OC1_Start();
-            DRV_TMR3_Start(); 
+            BSP_InitADC10();                    //Initialisation de l'AD
             
+            ExtinctionDesLeds();                //Extinction des LEDs
             
-            //.Chan1 = BSP_ReadAllADC();
+            GPWM_Initialize(&appData.mesValeurs);    //Initialisation des start Timers, OCs
             
             if (appInitialized)
             {
             
-                appData.state = APP_STATE_SERVICE_TASKS;
+                appData.state = APP_STATE_WAIT;
+                
             }
             break;
         }
-
-        case APP_STATE_SERVICE_TASKS:
+        
+        /* Application's wait state. */
+        case APP_STATE_WAIT:
         {
-          //test
-            //Test 3 Shifteh
             break;
         }
-
-        /* TODO: implement your application state machine.*/
         
+        /* Application's Service tasks state. */
+        case APP_STATE_SERVICE_TASKS:
+        {
+            break;
+        }
 
         /* The default state should never be executed. */
         default:

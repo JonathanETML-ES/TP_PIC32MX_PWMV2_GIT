@@ -69,17 +69,19 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 
- 
+
 
 void __ISR(_TIMER_1_VECTOR, ipl4AUTO) IntHandlerDrvTmrInstance0(void)
 {
-    PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_1);  //Efface l'état du drapeau d'interruption pour le Timer1.
+    BSP_LEDOff(BSP_LED_0);      //Mis un état High sur la LED0 afin de pouvoir voir la durée tu timer1
     
-    /*static uint8_t compteur = 0, flag = 0;
+    PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_1);  //Efface l'état du drapeau d'interruption pour le Timer1
+    
+    static uint8_t compteur = 0, flag = 0;
     
     compteur ++;
     
-    if(flag == 0 && compteur >= 30) //Ici, je viens compter jusqua 30x100ms donc 3 secondes 
+    if(flag == 0 && compteur >= 150) //Ici, je viens compter jusqua 150x20ms donc 3 secondes 
     {
         flag = 1;                   //Qui vient activer un flag afin que
     }                               //l'état APP_STATE_SERVICE_TASKS ce update à chaque cycle apres les 3 premières secondes
@@ -87,10 +89,12 @@ void __ISR(_TIMER_1_VECTOR, ipl4AUTO) IntHandlerDrvTmrInstance0(void)
     if(flag)
     {                               //Changement d'état de ma machine d'état
         APP_UpdateState (APP_STATE_SERVICE_TASKS);
-    }*/
-    
-    BSP_LEDToggle(BSP_LED_0);
-    
+        
+        GPWM_GetSettings(&appData.mesValeurs);     // Obtention vitesse et angle
+        GPWM_DispSettings(&appData.mesValeurs);    // Affichage
+        GPWM_ExecPWM(&appData.mesValeurs);         // Execution PWM et gestion moteur
+    }
+    BSP_LEDOn(BSP_LED_0);      //Mis un état Low sur la LED0 afin de pouvoir voir la durée tu timer1
 }
 void __ISR(_TIMER_2_VECTOR, ipl0AUTO) IntHandlerDrvTmrInstance1(void)
 {
@@ -98,13 +102,16 @@ void __ISR(_TIMER_2_VECTOR, ipl0AUTO) IntHandlerDrvTmrInstance1(void)
 void __ISR(_TIMER_3_VECTOR, ipl0AUTO) IntHandlerDrvTmrInstance2(void)
 {
 }
-void __ISR(_TIMER_4_VECTOR, ipl4AUTO) IntHandlerDrvTmrInstance3(void)
+void __ISR(_TIMER_4_VECTOR, ipl7AUTO) IntHandlerDrvTmrInstance3(void)
 {
-    PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_4);
+    BSP_LEDOff(BSP_LED_1);      //Mis un état High sur la LED1 afin de pouvoir voir la durée tu timer4
     
-    BSP_LEDToggle(BSP_LED_3);
+    PLIB_INT_SourceFlagClear(INT_ID_0,INT_SOURCE_TIMER_4);  //Efface l'état du drapeau d'interruption pour le Timer4
+    GPWM_ExecPWMSoft(&appData.mesValeurs);                  //Execution PWM Software
+    
+    BSP_LEDOn(BSP_LED_1);      //Mis un état Low sur la LED1 afin de pouvoir voir la durée tu timer4
 }
  
 /*******************************************************************************
  End of File
-*/
+*/ 
