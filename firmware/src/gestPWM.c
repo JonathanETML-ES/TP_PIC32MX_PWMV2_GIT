@@ -2,10 +2,10 @@
 // GestPWM.c
 /*--------------------------------------------------------*/
 //	Description :	Gestion des PWM 
-//			        pour TP1 2016-2017
+//			        pour TP1 2022-2023
 //
 //	Auteur 		: 	C. HUBER
-//
+//  Mod         :   JSH, GSU
 //	Version		:	V1.1
 //	Compilateur	:	XC32 V1.42 + Harmony 1.08
 //
